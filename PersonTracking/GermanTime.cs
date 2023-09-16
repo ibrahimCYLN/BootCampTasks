@@ -17,7 +17,7 @@ namespace PersonTracking
             //Console.WriteLine("Almanya'nın saat dilimi: " + germanyZone);
             // Almanya'nın saati
             DateTime germanyTime = TimeZoneInfo.ConvertTime(localTime, germanyZone);
-            Console.WriteLine("System Time:" + germanyTime.AddHours(-1));
+            Console.WriteLine("System Time:" + germanyTime);
 
         }
     }

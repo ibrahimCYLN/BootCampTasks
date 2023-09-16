@@ -15,8 +15,9 @@ namespace PersonTracking
 
             germanTime.GermanTimeAdd();
             logIn.Opening();
-            string[] userSpace= { "ibrahim","ahmet" };
-            string[] password = { "BCibrahim","BCahmet" };
+            string[] userSpace= { "ibrahim","ahmet","oguzhan" };
+            string[] password = { "BCibrahim","BCahmet","BCoguzhan" };
+            DateTime?[] logInTimes = { null, null,null };
 
             Console.Write("Enter username:");
             string enteryUserName=Console.ReadLine();
@@ -30,7 +31,7 @@ namespace PersonTracking
                 if (userSpace[i] == enteryUserName)
                 {
                     passingName = true;
-                    if (password[i] == enteryPassword) { passingPass = true; }
+                    if (password[i] == enteryPassword) { passingPass = true; logInTimes[i] = DateTime.Now; }
                     else { break; }
 
                 }
