@@ -38,21 +38,19 @@ namespace PersonTracking
 
                 if (whoIs == "other")
                 {
+                    tryLogIn = false;
                     Console.Clear();
                     Console.Write("Kullanıcı gir:");
                     string tempName = Console.ReadLine().ToLower();
-                    Console.WriteLine(tempName);
+                    Console.Write(tempName+" ");
                     //Console.ReadLine();
                     for (int i = 0; i < userSpace.userName.Length; i++)
                     {
                         if (userSpace.userName[i] == tempName)
                         {
-                            Console.WriteLine("mesai süresi:" + UserSpace.mesaiSuresi[i]);
-                           // string tl = ((UserSpace.mesaiSuresi[i] - 40) * 50).ToString("C", new CultureInfo("tr-TR"));
-                            /*double mesaiUcreti= ((UserSpace.mesaiSuresi[i] - 40) * 50);
-                            string tl1 = mesaiUcreti.ToString("C", new CultureInfo("tr-TR"));*/
-                            if (UserSpace.mesaiSuresi[i] > 40) { Console.WriteLine("mesai ücreti" + ((UserSpace.mesaiSuresi[i] - 40) * 50).ToString("C2")); }
-                            else { Console.WriteLine("Mesai yapılmamıştır"); break; }
+                            Console.WriteLine("Total working time:" + UserSpace.mesaiSuresi[i]);
+                            if (UserSpace.mesaiSuresi[i] > 40) { Console.WriteLine("Working wage:" + ((UserSpace.mesaiSuresi[i] - 40) * 50).ToString("C2")+"Tl"); }
+                            else { Console.WriteLine("No overtime working"); break; }
                         }
                     }
 

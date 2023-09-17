@@ -73,7 +73,7 @@ namespace PersonTracking
                         //Console.WriteLine(userSpace.logInTimes[userQue].Value);
                         
                         if (fark.TotalSeconds > 40) { Console.WriteLine("Overtime working time:" + (UserSpace.mesaiSuresi[userQue]-40)); }
-                        Console.WriteLine("Total working coast:" + ((UserSpace.mesaiSuresi[userQue] - 40) * 50).ToString("C2"));
+                        Console.WriteLine("Total working coast:" + ((UserSpace.mesaiSuresi[userQue] - 40) * 50).ToString("C2")+"Tl");
                     }
                 else
                 {//Moladan geliyor
