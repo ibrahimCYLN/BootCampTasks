@@ -83,8 +83,8 @@ namespace PersonTracking
                         UserSpace.molaSuresi[userQue] += fark1.TotalSeconds;
                         userSpace.logInTimes[userQue] = germanTime.germanyTime;//Log in time update
 
-                        Console.WriteLine("Total working time:" + UserSpace.molaSuresi[userQue]);
-                        Console.WriteLine("Last working time:" + fark1.TotalSeconds);
+                        Console.WriteLine("Total break time:" + UserSpace.molaSuresi[userQue]);
+                        Console.WriteLine("Last brek time:" + fark1.TotalSeconds);
 
                     }
                 
