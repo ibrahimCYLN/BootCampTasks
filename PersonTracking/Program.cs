@@ -64,8 +64,8 @@ namespace PersonTracking
                         userSpace.userWorking[userQue] = false;
                         germanTime.GermanTimeAdd();//saatimizi güncelledik
                         TimeSpan fark = germanTime.germanyTime.Subtract(userSpace.logInTimes[userQue].Value);
-                        userSpace.logInTimes[userQue] = germanTime.germanyTime;
                         UserSpace.mesaiSuresi[userQue] += fark.TotalSeconds;
+                        userSpace.logInTimes[userQue] = germanTime.germanyTime;//Log in time update
                         //////////////////////
                         Console.WriteLine("Total working time:"+UserSpace.mesaiSuresi[userQue]);
                         Console.WriteLine("Last working time:" + fark.TotalSeconds);
@@ -81,6 +81,10 @@ namespace PersonTracking
                         germanTime.GermanTimeAdd();
                         TimeSpan fark1 = germanTime.germanyTime.Subtract(userSpace.logInTimes[userQue].Value);
                         UserSpace.molaSuresi[userQue] += fark1.TotalSeconds;
+                        userSpace.logInTimes[userQue] = germanTime.germanyTime;//Log in time update
+
+                        Console.WriteLine("Total working time:" + UserSpace.molaSuresi[userQue]);
+                        Console.WriteLine("Last working time:" + fark1.TotalSeconds);
 
                     }
                 
