@@ -8,16 +8,12 @@ namespace PersonTracking
 {
     internal class GermanTime
     {
+        public DateTime germanyTime;//Global saat tanımladık
         public void GermanTimeAdd() 
         {
-            // Add local time
-            DateTime localTime = DateTime.Now;
-            // Almanya'nın saat dilimi
-            TimeZoneInfo germanyZone = TimeZoneInfo.FindSystemTimeZoneById("W. Europe Standard Time");
-            //Console.WriteLine("Almanya'nın saat dilimi: " + germanyZone);
-            // Almanya'nın saati
-            DateTime germanyTime = TimeZoneInfo.ConvertTime(localTime, germanyZone);
-            Console.WriteLine("System Time:" + germanyTime);
+            germanyTime = DateTime.UtcNow;
+            germanyTime = germanyTime.AddHours(2);//gmt+2
+        Console.WriteLine("System Time:" + germanyTime);
 
         }
     }

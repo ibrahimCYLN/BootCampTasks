@@ -26,7 +26,7 @@ namespace PersonTracking
                     Console.WriteLine("Unavailable entering, please try again or writing exit");
                 }
                 //Console.WriteLine("Welcome to Person Tracking System");
-                Console.Write("Who want to log in? (Employee/Guest):");
+                Console.Write("Who want to log in? (Employee/Other):");
                 whoIs = Console.ReadLine().ToLower();
                 if (whoIs=="exit")
                 {
@@ -35,7 +35,7 @@ namespace PersonTracking
                 Console.Clear();
                 //Console.WriteLine(whoIs);
             }
-            while (whoIs != "employee" && whoIs != "guest");
+            while (whoIs != "employee" && whoIs != "other");
             Console.Clear();
         }
 
