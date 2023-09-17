@@ -9,6 +9,7 @@ namespace PersonTracking
     internal class GermanTime
     {
         public DateTime germanyTime;//Global saat tanımladık
+        
         public void GermanTimeAdd() 
         {
             germanyTime = DateTime.UtcNow;
